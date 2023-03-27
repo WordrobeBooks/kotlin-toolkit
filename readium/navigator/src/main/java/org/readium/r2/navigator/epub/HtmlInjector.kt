@@ -45,7 +45,8 @@ internal fun Resource.injectHtml(
 
         // Disable the text selection if the publication is protected.
         // FIXME: This is a hack until proper LCP copy is implemented, see https://github.com/readium/kotlin-toolkit/issues/221
-        if (disableSelectionWhenProtected && publication.isProtected) {
+        // ***Wordrobe hack***: Disable selection to prevent copy and share
+        //if (disableSelectionWhenProtected && publication.isProtected) {
             injectables.add(
                 """
                 <style>
@@ -56,7 +57,7 @@ internal fun Resource.injectHtml(
                 </style>
             """
             )
-        }
+        //}
 
         val headEndIndex = content.indexOf("</head>", 0, true)
         if (headEndIndex == -1) {
