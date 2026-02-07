@@ -57,9 +57,9 @@ include(":readium:adapters:pspdfkit:pspdfkit-navigator")
 project(":readium:adapters:pspdfkit:pspdfkit-navigator")
     .name = "readium-adapter-pspdfkit-navigator"
 
-include(":readium:lcp")
-project(":readium:lcp")
-    .name = "readium-lcp"
+//include(":readium:lcp")
+//project(":readium:lcp")
+//    .name = "readium-lcp"
 
 include(":readium:navigator")
 project(":readium:navigator")
